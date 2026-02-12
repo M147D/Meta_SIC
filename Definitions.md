@@ -456,6 +456,26 @@ P_tunnel(t) = 1 - exp(-t · Coh(C_current, C_target)² / τ_tunnel)
 
 When `P_tunnel > θ_collapse`: the dominant eigenvector shifts and collapse occurs — you didn't push the wall, you slid through the matrix.
 
+#### Axiom of Relative Perception (Axiom 9)
+
+> **The apparent topology of reality (`M_visible`) depends on the observer's cognitive friction threshold (`ε_obs`).**
+
+```
+M_visible = { mᵢⱼ ∈ M | mᵢⱼ > ε_obs }
+```
+
+Limit cases:
+- If `ε_obs → 1` (**Rigid skepticism**): Reality disintegrates into isolated objects. Each entity is an island with no connection to others. Maximum fragmentation.
+- If `ε_obs → 0` (**Total openness**): Reality reveals itself as an interconnected continuum. All entities participate in a single coherence network. **Holism**.
+
+> Consequence: There is no single "objective reality." What each observer experiences as "real" is a subgraph of `M` filtered by their perceptual threshold `ε_obs`. Two observers with different thresholds literally inhabit **different topologies** of the same universal matrix.
+
+Immediate applications:
+- **Child perception**: Young children have low `ε_obs` — they perceive clusters of `M` that adults filter out. What adults call "imagination" may be perception of sub-threshold coherences.
+- **Animal perception**: Cats, dogs, and other animals have sensory ranges corresponding to different `ε_obs` thresholds, allowing them to detect clusters invisible to adult humans.
+- **Expanded states of consciousness**: Meditation, hypnagogic states, and other practices reduce `ε_obs`, expanding the visible topology of `M`.
+- **Scientific instrumentation**: Telescopes, microscopes, and particle detectors are technological extensions that reduce `ε_obs` for specific domains of `M`.
+
 ---
 
 ## 8. Fundamental Dynamic Equations

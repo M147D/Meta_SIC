@@ -12,6 +12,14 @@ Things mean something different depending on the context, scale, and perspective
 
 ---
 
+### Figure 1: SIC Dynamics & Topology
+
+![SIC — Contextual Friction, Mental Synchronization & Perception](sincronizacion.png)
+
+> **(Top)** Simulation of the energy cost to transit between realities. Internal synchronization (phase tuning) enables the "tunnel effect", reducing contextual friction to near zero. **(Bottom)** The Observer Effect modeled as a dispersion filter (`ε`). The reality we perceive depends on our coherence acceptance threshold. What for a skeptical adult (`ε=0.4`) is invisible noise, for an expanded perception (`ε=0.08`) is a tangible causal connection.
+
+---
+
 ## Core Idea
 
 Every phenomenon exists relative to a contextual frame. SIC provides:
@@ -22,7 +30,7 @@ Every phenomenon exists relative to a contextual frame. SIC provides:
 - **Coherence Metrics** `Coh(C₁, C₂) ∈ [0, 1]` — measuring compatibility between contexts
 - **Inference Rules** — for reasoning within and across contexts
 
-## Eight Axioms
+## Nine Axioms
 
 | # | Name | Statement |
 |---|------|-----------|
@@ -34,6 +42,7 @@ Every phenomenon exists relative to a contextual frame. SIC provides:
 | 6 | Bounded Transitivity | `Coh(C₁, C₃) ≥ Coh(C₁, C₂) · Coh(C₂, C₃)` |
 | 7 | Preservation under Transformation | Structure-preserving transforms cannot reduce coherence |
 | 8 | Friction | Every context change `∂C ≠ 0` generates friction `Φ > 0` subtracted from internal update capacity |
+| 9 | Relative Perception | The apparent topology of reality `𝕄_visible` depends on the observer's cognitive friction threshold `ε_obs` |
 
 ## Key Formalizations
 

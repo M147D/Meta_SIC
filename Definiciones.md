@@ -456,6 +456,26 @@ P_túnel(t) = 1 - exp(-t · Coh(C_actual, C_objetivo)² / τ_túnel)
 
 Cuando `P_túnel > θ_colapso`: el autovector dominante cambia y ocurre el colapso — no empujaste la pared, te deslizaste a través de la matriz.
 
+#### Axioma de Percepción Relativa (Axioma 9)
+
+> **La topología aparente de la realidad (`𝕄_visible`) depende del umbral de fricción cognitiva (`ε_obs`) del observador.**
+
+```
+𝕄_visible = { mᵢⱼ ∈ 𝕄 | mᵢⱼ > ε_obs }
+```
+
+Casos límite:
+- Si `ε_obs → 1` (**Escepticismo rígido**): La realidad se desintegra en objetos aislados. Cada entidad es una isla sin conexión con las demás. Máxima fragmentación.
+- Si `ε_obs → 0` (**Apertura total**): La realidad se revela como un continuo interconectado. Todas las entidades participan de una misma red de coherencia. **Holismo**.
+
+> Consecuencia: No existe una "realidad objetiva" única. Lo que cada observador experimenta como "real" es un subgrafo de `𝕄` filtrado por su umbral perceptual `ε_obs`. Dos observadores con umbrales diferentes habitan literalmente **topologías diferentes** de la misma matriz universal.
+
+Aplicaciones inmediatas:
+- **Percepción infantil**: Los niños pequeños tienen `ε_obs` bajo — perciben clusters de `𝕄` que los adultos filtran. Lo que el adulto llama "imaginación" puede ser percepción de coherencias sub-umbrales.
+- **Percepción animal**: Gatos, perros y otros animales tienen rangos sensoriales que corresponden a umbrales `ε_obs` diferentes, permitiéndoles detectar clusters invisibles para humanos adultos.
+- **Estados expandidos de conciencia**: Meditación, estados hipnagógicos y otras prácticas reducen `ε_obs`, ampliando la topología visible de `𝕄`.
+- **Instrumentación científica**: Telescopios, microscopios y detectores de partículas son extensiones tecnológicas que reducen `ε_obs` para dominios específicos de `𝕄`.
+
 ---
 
 ## 8. Ecuaciones Dinámicas Fundamentales

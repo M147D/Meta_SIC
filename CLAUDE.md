@@ -25,12 +25,15 @@ The metalanguage operates on **Contextual Entities** `E{C, S, P}` where:
 - **S** = Scale (quantum, microscopic, human, cosmic...)
 - **P** = Perspective (objective, subjective, deterministic, statistical...)
 
-Seven foundational axioms:
+Nine foundational axioms:
 - Axioms 1-3: Contextual Coherence, Transformability, Constitutive Perspective
 - Axioms 4-7: Coherence properties (Reflexivity, Symmetry, Bounded Transitivity, Preservation under Transformation)
+- Axiom 8: Friction (every context change generates friction subtracted from internal update capacity)
+- Axiom 9: Relative Perception (apparent reality topology depends on observer's friction threshold ε_obs)
 
 Key formalizations:
 - **`⊕_P`**: Independent perspective composition (resolves circularity in `⊕`)
+- **Contextual Friction `Φ`**: `Φ(A,B) = 1 - Coh(A,B)`, Processing Budget, Resonant Efficiency Corollary, Tunnel Effect (§7.6)
 - **Continuous parametrization**: Contexts as `(type, θ₁, ..., θₙ)` tuples enabling computable derivatives
 - **Perspectival dependency**: Parametrization is relative to `P_ref`; contextual curvature tensor `𝒦` (§7.2)
 - **Phase transitions**: Jump operator `Δ` and distributional derivative for discontinuous contexts (§7.5)
