@@ -80,19 +80,58 @@ Environmental {C:environment, S:minutes, P:strategic} — adjusts adaptive limit
 
 **Event-driven**: no `delay()`, no fixed-frequency loops. Events propagate through contexts that "resonate" based on activation conditions. Memory decays exponentially with real time (`exp(-Δt/τ)` via `millis()`).
 
-## Arduino Light Follower
+## Rust Formalization (`sic_core/`)
+
+A type-safe formalization of SIC where Rust's ownership model maps directly to the metalanguage:
+
+| Rust Feature | SIC Concept |
+|-------------|-------------|
+| `&'ctx Context` (lifetimes) | Temporal decay — entities can't outlive their context |
+| Ownership (move semantics) | Contextual exclusivity — one owner per entity |
+| Borrow checker | Safe event propagation — no aliased mutable contexts |
+| `trait ContextProcessor` | Formalized interface between nested contexts |
+| `Entity<'ctx>` (generics) | Compile-time context binding |
+
+```
+sic_core/
+├── Cargo.toml
+├── src/
+│   ├── lib.rs              # Module declarations
+│   ├── context.rs          # Context, Scale, Perspective types
+│   ├── entity.rs           # Entity<'ctx> with lifetime-enforced context binding
+│   ├── coherence.rs        # Coh(C₁,C₂), CoherenceMatrix 𝕄, friction, clustering
+│   ├── operators.rs        # ⊕ compose, × modulate, T transform
+│   ├── events.rs           # Event system, circular EventQueue
+│   └── nested_learning.rs  # Three nested contexts with ContextProcessor trait
+└── examples/
+    └── demo.rs             # Full demonstration
+```
+
+Build and run (requires [Rust](https://rustup.rs)):
+```bash
+cd sic_core && cargo run --example demo
+```
+
+## Python Simulation (`simulacion_sic/`)
+
+Interactive simulation of the Universal Coherence Matrix `𝕄` with visualization:
+
+- Generates N entities with random context parameters
+- Builds coherence matrix, applies entanglement friction `ε`
+- Finds clusters via BFS, computes local/global collapse
+- Produces 3-panel visualization: raw matrix, block-diagonal ordering, cluster topology graph
+
+```bash
+cd simulacion_sic && pip install -r requirements.txt
+python simulacion_sic.py --entities 20 --friction 0.15 --seed 42
+python simulacion_sic.py --entities 50 --friction 0.1 --no-plot  # CLI-only report
+```
+
+## Arduino Light Follower (`seguidor_luz_sic/`)
 
 A working implementation validating the Nested Learning concept with real hardware.
 
-**Hardware:**
-- Arduino Uno / Nano / ESP32
-- 2x LDR on A0, A1 (with 10kΩ pull-down resistors)
-- 1x SG90 Servo on Pin 9
-
-```
-seguidor_luz_sic/
-└── seguidor_luz_sic.ino    # Complete self-contained sketch
-```
+**Hardware:** Arduino Uno/Nano/ESP32, 2x LDR (A0, A1 with 10kΩ pull-down), 1x SG90 Servo (Pin 9)
 
 The sketch outputs CSV data via Serial (9600 baud) for real-time monitoring with Arduino Serial Plotter.
 
@@ -106,6 +145,13 @@ Meta_SIC/
 ├── Definitions.md                         # Formal framework (English) — §1-15
 ├── Aplicaciones.md                        # Implementation (Spanish) — §16-17
 ├── Applications.md                        # Implementation (English) — §16-17
+├── sic_core/                              # Rust formalization
+│   ├── Cargo.toml
+│   ├── src/                               # Core library modules
+│   └── examples/demo.rs                   # Full demonstration
+├── simulacion_sic/                        # Python simulation
+│   ├── simulacion_sic.py                  # CLI simulation + visualization
+│   └── requirements.txt
 └── seguidor_luz_sic/
     └── seguidor_luz_sic.ino               # Arduino sketch
 ```
@@ -117,7 +163,8 @@ Sections are numbered continuously: Definitions §1–15, Applications §16–17
 | Phase | Language | Purpose | Status |
 |-------|----------|---------|--------|
 | 1: Tangible | C/C++ (Arduino) | Hardware validation — light follower | Working |
-| 2: Formalization | Rust | Metalanguage interpreter, type-safe context system | Pending |
+| 2: Formalization | Rust | Metalanguage interpreter, type-safe context system | **In Progress** |
+| 2.5: Simulation | Python | Coherence matrix visualization & analysis | **Working** |
 | 3: Applications | Rust/WASM | Production systems (monitoring, security, data pipelines) | Pending |
 
 ## License

@@ -1,0 +1,10 @@
+[package]
+name = "sic_core"
+version = "0.1.0"
+edition = "2021"
+description = "Integrative Contextual Synthesis (SIC) Metalanguage — Rust formalization"
+authors = ["Miguel", "Claude"]
+
+[[example]]
+name = "demo"
+path = "examples/demo.rs"
