@@ -6,12 +6,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 **Metalenguaje de Síntesis Integrativa Contextual (SIC)** — a formal mathematical metalanguage for unifying phenomena across contexts, scales, and perspectives. Developed collaboratively by Miguel and Claude.
 
-This is a theoretical/specification project with a working Arduino implementation. All content is written in **Spanish**.
+This is a theoretical/specification project with a working Arduino implementation. All content available in **Spanish** and **English**.
 
 ## File Structure
 
-- **Definiciones.txt** (Sections 1–15): Core formal framework — axioms (including coherence axioms 4-7), operators (`⊕`, `×`, `∘`) with resolved `⊕_P` composition, contextual calculus with continuous parametrization, dynamic equations, metrics, theorems, contextual entanglement and reality collapse (§11), inference rules, and the Context Algebra (`E{C,S,P}` entities as commutative monoid).
-- **Aplicaciones.txt** (Section 16–17): Computational implementation — Nested Learning concept, event-driven architecture, Arduino/C++ light follower project, Rust formalization strategy, and implementation roadmap.
+- **Definiciones.md** / **Definitions.md** (Sections 1–15): Core formal framework — axioms (including coherence axioms 4-7), operators (`⊕`, `×`, `∘`) with resolved `⊕_P` composition, contextual calculus with continuous parametrization, dynamic equations, metrics, theorems, contextual entanglement and reality collapse (§11), inference rules, and the Context Algebra (`E{C,S,P}` entities as commutative monoid).
+- **Aplicaciones.md** / **Applications.md** (Section 16–17): Computational implementation — Nested Learning concept, event-driven architecture, Arduino/C++ light follower project, Rust formalization strategy, and implementation roadmap.
 - **seguidor_luz_sic/seguidor_luz_sic.ino**: Working Arduino sketch — event-driven light follower with three nested contexts (reactive, adaptive, environmental). Compiles for Arduino Uno/Nano/ESP32.
 
 The sections are numbered continuously across both files (Definiciones: 1–15, Aplicaciones: 16–17).
@@ -73,6 +73,6 @@ The sketch outputs CSV data via Serial (9600 baud) for monitoring with Serial Pl
 - Maintain continuous section numbering across both files
 - Preserve mathematical notation (Unicode symbols: `⊕`, `×`, `∘`, `⟹`, `≡`, `∂`, `∫`, `∇`, `∮`, `Ψ`, `Ω`)
 - Keep the event-driven paradigm consistent — no polling/fixed-frequency patterns
-- Code examples in Aplicaciones.txt are conceptual/pseudocode, not standalone runnable files
+- Code examples in Aplicaciones.md are conceptual/pseudocode, not standalone runnable files
 - The Arduino sketch in `seguidor_luz_sic/` is a compilable .ino file
-- Both .txt files use UTF-8 encoding with CRLF line endings
+- All .md files use UTF-8 encoding
