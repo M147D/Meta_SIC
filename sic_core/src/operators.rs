@@ -5,7 +5,7 @@
 //! T  Context Transformation
 
 use crate::coherence::coherence;
-use crate::context::{Context, Perspective, Scale};
+use crate::context::Context;
 use crate::entity::{Entity, OwnedEntity};
 
 /// Contextual Composition ⊕ (Section 6.1.2).
