@@ -22,7 +22,7 @@ Every phenomenon exists relative to a contextual frame. SIC provides:
 - **Coherence Metrics** `Coh(C₁, C₂) ∈ [0, 1]` — measuring compatibility between contexts
 - **Inference Rules** — for reasoning within and across contexts
 
-## Seven Axioms
+## Eight Axioms
 
 | # | Name | Statement |
 |---|------|-----------|
@@ -33,6 +33,7 @@ Every phenomenon exists relative to a contextual frame. SIC provides:
 | 5 | Coherence Symmetry | `Coh(C₁, C₂) = Coh(C₂, C₁)` |
 | 6 | Bounded Transitivity | `Coh(C₁, C₃) ≥ Coh(C₁, C₂) · Coh(C₂, C₃)` |
 | 7 | Preservation under Transformation | Structure-preserving transforms cannot reduce coherence |
+| 8 | Friction | Every context change `∂C ≠ 0` generates friction `Φ > 0` subtracted from internal update capacity |
 
 ## Key Formalizations
 
@@ -40,6 +41,7 @@ Every phenomenon exists relative to a contextual frame. SIC provides:
 - **Continuous Parametrization**: `C = (type, θ₁, ..., θₙ)` — contexts as points in a continuous parameter space, enabling computable derivatives and integrals
 - **Contextual Curvature Tensor `𝒦`**: The geometry of context space depends on the observer's perspective (§7.2)
 - **Phase Transitions**: Jump operator `Δ` and distributional derivative for discontinuous context changes (§7.5)
+- **Contextual Friction `Φ`**: `Φ(A,B) = 1 - Coh(A,B)` — the ontological incompatibility between states. Dynamic form uses metric tensor. Includes Processing Budget, Resonant Efficiency Corollary, and Contextual Tunnel Effect (§7.6)
 - **Contextual Entanglement**: Universal Coherence Matrix `𝕄` where `𝕄ᵢⱼ = Coh(Cᵢ, Cⱼ)` — analogous to the quantum density matrix
 - **Local Collapse**: Entanglement friction `ε` decomposes `𝕄` into sparse clusters; collapse is local and percolative, not global O(N³) (§11.4-11.5)
 - **Algebraic Structure**: `(𝔈, ⊕)` is a commutative monoid (§13)
@@ -65,6 +67,44 @@ Reality = mosaic of local collapses across clusters of 𝕄
 | Local collapse by resonance | Decoherence / measurement |
 | Friction `ε` (truncation) | Environmental decoherence |
 | Collapse percolation | Quantum phase transition |
+
+### Coherence Matrix Simulation
+
+![Universal Coherence Matrix Simulation](simulacion_sic.png)
+
+*50 entities, friction `ε=0.88` -> 23 clusters. Small clusters collapse (high internal coherence), while the large cluster remains in superposition. Reality emerges as a mosaic of local collapses.*
+
+## Contextual Friction & Perception
+
+**Contextual Friction** `Φ(A,B) = 1 - Coh(A,B)` is the ontological incompatibility between two states (§7.6). It is the "tax" the universe charges for every context change.
+
+### Why Can't We See Ghosts?
+
+The simulation below explains this through the SIC framework. The Coherence Matrix `𝕄` contains **ALL possible realities** — physical, subtle, and ultra-subtle. What determines which realities an observer can perceive is their **perception threshold `ε`** (contextual friction filter):
+
+| Observer | Threshold `ε` | What they see |
+|----------|---------------|---------------|
+| **Adult human** | High (0.4) | Only dense physical reality. Subtle clusters are invisible — filtered out by high friction. |
+| **Young child** | Low (0.2) | Their perceptual filter is wider. They can perceive additional clusters that adults cannot — this is why children sometimes report seeing things adults dismiss. |
+| **Animals** (cats, dogs, etc.) | Variable (0.08-0.3) | Different sensory ranges allow detection of clusters invisible to adult humans. This explains why animals sometimes react to "nothing." |
+
+**"Ghosts" are not imagination** — they are clusters in `𝕄` that **exist** but fall below the typical adult human's perception threshold `ε`. The entities are real; it's our perceptual filter that excludes them.
+
+### Mental Synchronization: Three Regimes
+
+The mind does not change reality by force. It acts as a **phase tuner** — adjusting internal coherence to reduce friction:
+
+| Regime | How it works | Result |
+|--------|-------------|--------|
+| **Brute Force** | Mind is misaligned with target (Coh ≈ 0, Φ ≈ 1) | Impossible — infinite energy required |
+| **Gradual Synchrony** | Mind rotates its phase to align with target. As Coh grows, Φ drops until energy cost < budget | **Collapse occurs** — reality shifts with minimal energy |
+| **Tunnel Effect** | Perfect alignment (Coh = 1) maintained over time. Probability accumulates in target sector of `𝕄` | **Spontaneous collapse** — barrier penetrated without "climbing" it |
+
+> *"Infinite energy is only needed for those who try to change external context without changing their internal context first. For the synchronized mind, the universe is a superconductor."*
+
+![Mental Synchronization & Perception Simulation](sincronizacion.png)
+
+*Top row: Three synchronization regimes (brute force fails, gradual synchrony collapses at t=2.0, tunnel effect collapses at t=3.6). Bottom row: Same reality matrix seen through different perception thresholds — the adult sees 3 disconnected clusters, the child/animal sees 2, expanded perception sees everything as connected.*
 
 ## Nested Learning Architecture
 
@@ -112,19 +152,27 @@ Build and run (requires [Rust](https://rustup.rs)):
 cd sic_core && cargo run --example demo
 ```
 
-## Python Simulation (`simulacion_sic/`)
+## Python Simulations (`simulacion_sic/`)
 
-Interactive simulation of the Universal Coherence Matrix `𝕄` with visualization:
+Two interactive simulations with visualization:
 
-- Generates N entities with random context parameters
-- Builds coherence matrix, applies entanglement friction `ε`
-- Finds clusters via BFS, computes local/global collapse
-- Produces 3-panel visualization: raw matrix, block-diagonal ordering, cluster topology graph
+**1. Universal Coherence Matrix** (`simulacion_sic.py`):
+- Generates N entities, builds `𝕄`, applies friction `ε`, finds clusters, computes collapse
+- 3-panel visualization: raw matrix, block-diagonal ordering, cluster topology graph
 
 ```bash
 cd simulacion_sic && pip install -r requirements.txt
-python simulacion_sic.py --entities 20 --friction 0.15 --seed 42
-python simulacion_sic.py --entities 50 --friction 0.1 --no-plot  # CLI-only report
+python simulacion_sic.py --entities 50 --friction 0.88 --seed 42
+```
+
+**2. Mental Synchronization & Perception** (`sincronizacion_mental.py`):
+- Three synchronization regimes (brute force, gradual, tunnel effect)
+- Perception ranges: why adults, children, and animals see different realities
+- Contextual friction `Φ = 1 - Coh` phase diagram
+
+```bash
+python sincronizacion_mental.py
+python sincronizacion_mental.py --no-plot  # CLI-only report
 ```
 
 ## Arduino Light Follower (`seguidor_luz_sic/`)
@@ -149,8 +197,9 @@ Meta_SIC/
 │   ├── Cargo.toml
 │   ├── src/                               # Core library modules
 │   └── examples/demo.rs                   # Full demonstration
-├── simulacion_sic/                        # Python simulation
-│   ├── simulacion_sic.py                  # CLI simulation + visualization
+├── simulacion_sic/                        # Python simulations
+│   ├── simulacion_sic.py                  # Coherence matrix simulation
+│   ├── sincronizacion_mental.py           # Friction, synchronization & perception
 │   └── requirements.txt
 └── seguidor_luz_sic/
     └── seguidor_luz_sic.ino               # Arduino sketch

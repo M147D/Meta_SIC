@@ -377,6 +377,87 @@ The contextual derivative is extended to include both smooth regions and jump po
 
 ---
 
+### 7.6 The Contextual Friction Metric (Φ)
+
+**Contextual Friction** is not the rubbing of two physical surfaces. It is a measure of **Ontological Incompatibility** between two states — the cost of simultaneously existing in different contexts.
+
+#### Static Definition (The Barrier)
+
+Friction is the complement of coherence. If coherence measures compatibility, friction measures the cost of holding two contexts together:
+
+```
+Φ(A, B) = 1 - Coh(A, B)
+```
+
+Immediate properties:
+- If `Coh(A, B) = 1` (identity): `Φ = 0` — no cost to "be oneself"
+- If `Coh(A, B) = 0` (orthogonality): `Φ = 1` — coexistence impossible without infinite external energy
+- `Φ ∈ [0, 1]` — inherits the range from coherence
+
+> Visualization: A landscape of mountains and valleys. **Valleys** are low-friction zones (high coherence) where things exist naturally. Moving from one valley to another (changing context) requires climbing a mountain. That "height" is the Friction Φ.
+
+#### Dynamic Definition (The Processing Cost)
+
+Dynamic friction is the work required to transform an Entity from Context `C` to `C + dC`. Using the Metric Tensor `gᵢⱼ` (§7.2):
+
+```
+Φ_dynamic = √(gᵢⱼ · (∂θⁱ/∂t) · (∂θʲ/∂t))
+```
+
+> In simple terms: dynamic friction is the "resistance" that the fabric of reality (defined by tensor `g`) opposes when attempting to change the parameters `θ` of a context.
+
+#### Friction Axiom (Axiom 8)
+
+> **Every context change `∂C ≠ 0` generates a friction `Φ > 0` that must be subtracted from the entity's internal update capacity.**
+
+Consequence: Movement reduces the rate of subjective experience.
+
+#### The Processing Budget
+
+An entity's total budget is finite:
+
+```
+U_total = Φ_dynamic (cost of moving) + ΔS_internal (cost of living)
+```
+
+This makes the Twin Paradox (§14.5) **mathematically inevitable**:
+- The universe charges a "tax" (Φ) for every context change
+- That tax is paid with internal computation cycles (life/subjective time)
+- If Φ is high (heavy acceleration), less budget remains for `ΔS_internal`
+- The traveling twin lives less "internal time": they spent their budget paying the travel friction
+
+#### Resonant Efficiency Corollary
+
+The energy required to transit from context `C_A` to `C_B` is inversely proportional to the internal synchrony established a priori by the Entity:
+
+```
+E_req ∝ Φ(C_A, C_B) / S_synchrony
+```
+
+Where `S_synchrony` is the observer's (mind's) capacity to emulate the structure of `C_B` within its own Perspective (P) before transit.
+
+Three regimes:
+
+| Regime | Coherence | Friction | Required Energy |
+|--------|-----------|----------|-----------------|
+| **Brute force** (misaligned) | Coh ≈ 0 | Φ ≈ 1 | E → ∞ (impossible) |
+| **Gradual synchrony** (phase alignment) | Coh grows → 1 | Φ decreases → 0 | E drops until crossing threshold → **collapse** |
+| **Tunnel effect** (absolute certainty) | Coh = 1 sustained | Φ = 0 | Accumulated probability → **spontaneous collapse** |
+
+> The mind does not work like a hammer breaking reality, but as a **phase tuner**. It does not move the mountain; it adjusts its Perspective (P) to find the pass where the mountain is flat.
+
+#### Contextual Tunnel Effect
+
+Analogous to quantum tunneling: if the friction barrier is high but the mind maintains perfect coherence (`Coh = 1`) with the target state for sufficient time, the probability amplitude in Matrix `𝕄` accumulates in the sector of the desired reality.
+
+```
+P_tunnel(t) = 1 - exp(-t · Coh(C_current, C_target)² / τ_tunnel)
+```
+
+When `P_tunnel > θ_collapse`: the dominant eigenvector shifts and collapse occurs — you didn't push the wall, you slid through the matrix.
+
+---
+
 ## 8. Fundamental Dynamic Equations
 
 ### 8.1 Contextual Evolution Equation

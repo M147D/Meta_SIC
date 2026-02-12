@@ -377,6 +377,87 @@ La derivada contextual se extiende para incluir tanto regiones suaves como punto
 
 ---
 
+### 7.6 La Métrica de Fricción Contextual (Φ)
+
+La **Fricción Contextual** no es el roce de dos superficies físicas. Es una medida de la **Incompatibilidad Ontológica** entre dos estados — el costo de existir simultáneamente en contextos diferentes.
+
+#### Definición Estática (La Barrera)
+
+La fricción es el complemento de la coherencia. Si la coherencia mide compatibilidad, la fricción mide el costo de mantener dos contextos juntos:
+
+```
+Φ(A, B) = 1 - Coh(A, B)
+```
+
+Propiedades inmediatas:
+- Si `Coh(A, B) = 1` (identidad): `Φ = 0` — no cuesta nada "ser uno mismo"
+- Si `Coh(A, B) = 0` (ortogonalidad): `Φ = 1` — coexistencia imposible sin energía externa infinita
+- `Φ ∈ [0, 1]` — hereda el rango de la coherencia
+
+> Visualización: Un paisaje de montañas y valles. Los **valles** son zonas de baja fricción (alta coherencia) donde las cosas existen naturalmente. Moverse de un valle a otro (cambiar de contexto) implica escalar una montaña. Esa "altura" es la Fricción Φ.
+
+#### Definición Dinámica (El Costo de Procesamiento)
+
+La fricción dinámica es el trabajo necesario para transformar una Entidad de un Contexto `C` a `C + dC`. Usando el Tensor Métrico `gᵢⱼ` (§7.2):
+
+```
+Φ_dinámica = √(gᵢⱼ · (∂θⁱ/∂t) · (∂θʲ/∂t))
+```
+
+> En términos simples: la fricción dinámica es la "resistencia" que opone el tejido de la realidad (definido por el tensor `g`) ante el intento de cambiar los parámetros `θ` de un contexto.
+
+#### Axioma de Fricción (Axioma 8)
+
+> **Todo cambio de contexto `∂C ≠ 0` genera una fricción `Φ > 0` que debe sustraerse de la capacidad de actualización interna de la entidad.**
+
+Consecuencia: El movimiento reduce la tasa de experiencia subjetiva.
+
+#### El Presupuesto de Procesamiento
+
+El presupuesto total de una entidad es finito:
+
+```
+U_total = Φ_dinámica (costo de moverse) + ΔS_interno (costo de vivir)
+```
+
+Esto hace la Paradoja de los Gemelos (§14.5) **matemáticamente inevitable**:
+- El universo cobra un "impuesto" (Φ) por cada cambio de contexto
+- Ese impuesto se paga con ciclos de computación interna (vida/tiempo subjetivo)
+- Si Φ es alto (mucha aceleración), queda menos presupuesto para `ΔS_interno`
+- El gemelo viajero vive menos "tiempo interno": gastó su presupuesto pagando la fricción del viaje
+
+#### Corolario de Eficiencia Resonante
+
+La energía necesaria para transitar de un contexto `C_A` a `C_B` es inversamente proporcional a la sincronía interna establecida a priori por la Entidad:
+
+```
+E_req ∝ Φ(C_A, C_B) / S_sincronía
+```
+
+Donde `S_sincronía` es la capacidad del observador (mente) para emular la estructura de `C_B` dentro de su propia Perspectiva (P) antes del tránsito.
+
+Tres regímenes:
+
+| Régimen | Coherencia | Fricción | Energía requerida |
+|---------|-----------|----------|-------------------|
+| **Fuerza bruta** (desalineado) | Coh ≈ 0 | Φ ≈ 1 | E → ∞ (imposible) |
+| **Sincronía gradual** (alineación de fase) | Coh crece → 1 | Φ decrece → 0 | E cae hasta cruzar umbral → **colapso** |
+| **Efecto túnel** (certeza absoluta) | Coh = 1 mantenida | Φ = 0 | Probabilidad acumulada → **colapso espontáneo** |
+
+> La mente no funciona como un martillo que rompe la realidad, sino como un **sintonizador de fase**. No mueve la montaña; ajusta su Perspectiva (P) para encontrar el paso donde la montaña es plana.
+
+#### Efecto Túnel Contextual
+
+Análogo al efecto túnel cuántico: si la barrera de fricción es alta pero la mente mantiene coherencia perfecta (`Coh = 1`) con el estado objetivo durante suficiente tiempo, la amplitud de probabilidad en la Matriz `𝕄` se acumula en el sector de la realidad deseada.
+
+```
+P_túnel(t) = 1 - exp(-t · Coh(C_actual, C_objetivo)² / τ_túnel)
+```
+
+Cuando `P_túnel > θ_colapso`: el autovector dominante cambia y ocurre el colapso — no empujaste la pared, te deslizaste a través de la matriz.
+
+---
+
 ## 8. Ecuaciones Dinámicas Fundamentales
 
 ### 8.1 Ecuación de Evolución Contextual
