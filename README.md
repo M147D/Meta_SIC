@@ -202,6 +202,8 @@ Meta_SIC/
 ├── Definitions.md                         # Formal framework (English) — §1-15
 ├── Aplicaciones.md                        # Implementation (Spanish) — §16-17
 ├── Applications.md                        # Implementation (English) — §16-17
+├── Proyectos.md                           # Projects & applications catalog (Spanish)
+├── Projects.md                            # Projects & applications catalog (English)
 ├── sic_core/                              # Rust formalization
 │   ├── Cargo.toml
 │   ├── src/                               # Core library modules
