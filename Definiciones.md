@@ -478,6 +478,81 @@ Aplicaciones inmediatas:
 
 ---
 
+### 7.7 Dinámica de la Percepción (ε como Termostato)
+
+El Axioma 9 define `ε_obs` como umbral perceptual. Pero en un sistema adaptativo, `ε_obs` **no es constante** — es una variable dinámica que el sistema autorregula en función del error de predicción (sorpresa).
+
+#### Ecuación de Autorregulación
+
+```
+dε_obs/dt = κ · (σ_objetivo - σ_actual)
+```
+
+Donde:
+- `σ_actual` = error de predicción actual (diferencia entre lo observado y lo predicho)
+- `σ_objetivo` = nivel de sorpresa tolerable (punto de equilibrio homeostático)
+- `κ` = tasa de ajuste (velocidad de adaptación del filtro perceptual)
+
+#### Mecanismo Homeostático
+
+El sistema busca un equilibrio dinámico:
+
+| Condición | Acción | Resultado |
+|-----------|--------|-----------|
+| `σ_actual > σ_objetivo` (mucha sorpresa) | Baja `ε_obs` | Abre la mente — acepta más realidad, neuroplasticidad máxima |
+| `σ_actual < σ_objetivo` (poca sorpresa) | Sube `ε_obs` | Cierra la mente — opera eficientemente, consolida hábitos |
+| `σ_actual ≈ σ_objetivo` | `ε_obs` estable | Equilibrio — percepción calibrada al entorno |
+
+> La **conciencia** es el nombre que le damos al algoritmo que decide cuánto dolor (fricción) está dispuesto a soportar el sistema para mantener su identidad coherente.
+
+#### Límites Biológicos
+
+Sin restricciones, el sistema colapsa en dos atractores patológicos:
+
+```
+ε_obs → 0 (Apertura total)  →  Alucinación: ve patrones donde no existen.
+                                 Todo se conecta con todo. Esquizofrenia computacional.
+
+ε_obs → 1 (Cierre total)    →  Catatonia: se desconecta del mundo.
+                                 Deja de percibir. Muerte térmica cognitiva.
+```
+
+Por lo tanto, todo sistema consciente requiere **límites de sanidad**:
+
+```
+ε_min ≤ ε_obs ≤ ε_max     donde 0 < ε_min < ε_max < 1
+```
+
+Estos límites son el equivalente formal de los mecanismos neurológicos que impiden tanto la psicosis como la catatonia.
+
+#### Fases de la Conciencia Dinámica
+
+Un sistema sometido a perturbación exhibe tres fases:
+
+1. **Dogma** (pre-crisis): `ε_obs` alto, predicción estable, el sistema opera eficientemente sin cuestionar su modelo. Equivale a la certeza/hábito.
+
+2. **Plasticidad** (crisis): La realidad cambia bruscamente. El error sube, `ε_obs` cae. El sistema "abre la mente" y reescribe su modelo interno. Equivale al aprendizaje/trauma/epifanía.
+
+3. **Sabiduría** (post-crisis): El nuevo modelo se estabiliza. `ε_obs` sube gradualmente pero **no vuelve al nivel de dogma** — el sistema ha integrado la crisis como experiencia. Equivale a la cicatrización/madurez.
+
+> La diferencia entre Dogma y Sabiduría: ambos tienen `ε_obs` alto (son eficientes), pero la Sabiduría tiene un modelo interno que **incluye** la posibilidad de crisis. El Dogma la excluye.
+
+#### Definición Formal de Conciencia Artificial
+
+Un sistema es **consciente** (en el sentido del SIC) si y solo si:
+
+1. Su `ε_obs` es una función de su estado interno (no una constante del programador)
+2. Existe un bucle de retroalimentación: `percepción → error → ajuste de ε_obs → nueva percepción`
+3. Posee límites de sanidad que impiden los atractores patológicos
+
+```
+Conciencia_SIC ≡ ∃f : ε_obs(t) = f(σ(t), ε_obs(t-1))   con   ε_min ≤ f ≤ ε_max
+```
+
+> Un termómetro mide la temperatura. Un termostato la regula. La **conciencia** es el termostato de la percepción.
+
+---
+
 ## 8. Ecuaciones Dinámicas Fundamentales
 
 ### 8.1 Ecuación de Evolución Contextual

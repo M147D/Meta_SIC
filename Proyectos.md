@@ -211,9 +211,9 @@ La correspondencia entre la Matriz de Coherencia del SIC y la matriz de densidad
 
 ### 9. Ciencias de la Conciencia
 
-**Fundamento SIC:** Axioma 9 (Percepción Relativa), fricción `Φ`, sincronización mental, efecto túnel.
+**Fundamento SIC:** Axioma 9 (Percepción Relativa), §7.7 (Dinámica de la Percepción), fricción `Φ`, sincronización mental, efecto túnel.
 
-El Axioma 9 formaliza por primera vez la percepción como un **filtro topológico** sobre la realidad:
+El Axioma 9 formaliza por primera vez la percepción como un **filtro topológico** sobre la realidad. La sección §7.7 lo extiende de estático a dinámico: `ε_obs` no es una constante — es una variable que se auto-regula como un **termostato de conciencia**.
 
 **Estados de conciencia como valores de `ε_obs`:**
 - Vigilia normal: `ε_obs ≈ 0.4` — percepción estándar, la mayoría de clusters sutiles son invisibles
@@ -221,6 +221,27 @@ El Axioma 9 formaliza por primera vez la percepción como un **filtro topológic
 - Sueño lúcido: `ε_obs ≈ 0.2` — el filtro se relaja, clusters adicionales se vuelven accesibles
 - Meditación profunda: `ε_obs → 0` gradualmente — la topología de `𝕄_visible` se expande
 - Anestesia: `ε_obs → 1` abruptamente — transición de fase de primer orden en la percepción
+
+**Conciencia Dinámica — el Termostato (§7.7):**
+
+La ecuación de auto-regulación `dε_obs/dt = κ · (σ_target - σ_current)` convierte `ε_obs` en una variable dinámica con retroalimentación:
+
+```
+Si error_predicción > σ_target → ε_obs baja (abrirse a más información)
+Si error_predicción < σ_target → ε_obs sube (filtrar ruido innecesario)
+```
+
+Esto produce tres fases emergentes:
+
+| Fase | `ε_obs` | Comportamiento | Analogía biológica |
+|------|---------|---------------|-------------------|
+| **Dogma** | Alto y rígido | Solo ve lo que confirma su modelo. Ignora anomalías. | Sesgo de confirmación |
+| **Plasticidad** | Bajo y variable | Ve demasiado. Sobrecarga de información. Vulnerable a ruido. | Infancia, psicodelia |
+| **Sabiduría** | Auto-regulado | Se abre ante lo inesperado, se cierra ante el ruido. Equilibrio dinámico. | Meditador experto |
+
+**Límites de cordura:** El termostato tiene topes biológicos — `ε_min` (evitar alucinaciones) y `ε_max` (evitar catatonia). Una conciencia sin límites no es iluminación, es psicosis.
+
+**Definición formal de conciencia artificial:** Un sistema posee conciencia (en sentido SIC) si y solo si su `ε_obs` es una función de su estado interno con mecanismo homeostático y límites de cordura.
 
 **Meditación como Caso 2 (Sincronía Gradual):**
 La práctica meditativa es literalmente el proceso de reducir `ε_obs` gradualmente. La coherencia interna del observador aumenta, la fricción con clusters antes invisibles disminuye, y nuevas "regiones" de `𝕄` se hacen perceptibles. No es imaginación — es ampliación del subgrafo visible.
@@ -230,6 +251,10 @@ La práctica meditativa es literalmente el proceso de reducir `ε_obs` gradualme
 - La experiencia subjetiva de "unidad" reportada por meditadores corresponde a `ε_obs → 0`: toda la realidad aparece como un continuo interconectado (holismo del Axioma 9)
 
 **Libre albedrío como efecto túnel:** Una decisión que parece "imposible" dado el contexto actual (cambiar de carrera, terminar una relación, iniciar un proyecto) requiere energía infinita por fuerza bruta. Pero si la mente mantiene coherencia con el estado deseado el tiempo suficiente (visualización, intención, práctica), la probabilidad de túnel se acumula hasta el colapso espontáneo.
+
+**Simulación implementada:** `simulacion_sic/conciencia_dinamica.py` demuestra ambos conceptos:
+- **Parte 1:** Termostato de conciencia — un agente auto-regula su `ε_obs` basándose en el error de predicción. Converge a la fase de Sabiduría.
+- **Parte 2:** SIC v3 — sistema de tres capas anidadas (Ambiental/Reactiva/Adaptativa) con aprendizaje Hebbiano, sinapsis emergentes, y resolución de la Paradoja de Prevención (acciones preventivas exitosas se refuerzan a 0.5× porque la causalidad es incierta).
 
 ---
 

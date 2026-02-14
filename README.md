@@ -51,6 +51,7 @@ Every phenomenon exists relative to a contextual frame. SIC provides:
 - **Contextual Curvature Tensor `𝒦`**: The geometry of context space depends on the observer's perspective (§7.2)
 - **Phase Transitions**: Jump operator `Δ` and distributional derivative for discontinuous context changes (§7.5)
 - **Contextual Friction `Φ`**: `Φ(A,B) = 1 - Coh(A,B)` — the ontological incompatibility between states. Dynamic form uses metric tensor. Includes Processing Budget, Resonant Efficiency Corollary, and Contextual Tunnel Effect (§7.6)
+- **Perception Dynamics**: `dε_obs/dt = κ·(σ_target - σ_current)` — consciousness as a self-regulating thermostat with homeostatic feedback, sanity limits, and three emergent phases: Dogma, Plasticity, Wisdom (§7.7)
 - **Contextual Entanglement**: Universal Coherence Matrix `𝕄` where `𝕄ᵢⱼ = Coh(Cᵢ, Cⱼ)` — analogous to the quantum density matrix
 - **Local Collapse**: Entanglement friction `ε` decomposes `𝕄` into sparse clusters; collapse is local and percolative, not global O(N³) (§11.4-11.5)
 - **Algebraic Structure**: `(𝔈, ⊕)` is a commutative monoid (§13)
@@ -163,7 +164,7 @@ cd sic_core && cargo run --example demo
 
 ## Python Simulations (`simulacion_sic/`)
 
-Two interactive simulations with visualization:
+Three interactive simulations with visualization:
 
 **1. Universal Coherence Matrix** (`simulacion_sic.py`):
 - Generates N entities, builds `𝕄`, applies friction `ε`, finds clusters, computes collapse
@@ -183,6 +184,21 @@ python simulacion_sic.py --entities 50 --friction 0.88 --seed 42
 python sincronizacion_mental.py
 python sincronizacion_mental.py --no-plot  # CLI-only report
 ```
+
+**3. Dynamic Consciousness & SIC v3** (`conciencia_dinamica.py`):
+- Consciousness thermostat: agent auto-regulates `ε_obs` based on prediction error, converging to the Wisdom phase
+- SIC v3: three nested layers (Environmental/Reactive/Adaptive) with Hebbian learning and emergent synapses
+- Prevention Paradox resolution: preventive actions reinforced at 0.5× (uncertain causality)
+- 6-panel visualization: thermostat dynamics + SIC v3 emergent behavior
+
+```bash
+python conciencia_dinamica.py
+python conciencia_dinamica.py --no-plot  # CLI-only report
+```
+
+![Dynamic Consciousness Simulation](conciencia.png)
+
+*Left: Consciousness thermostat — ε_obs self-regulates between dogma and plasticity, converging to wisdom. Right: SIC v3 discovers hidden causal rules (LOGIN→CPU_LOAD synapse emerges via Hebbian learning).*
 
 ## Arduino Light Follower (`seguidor_luz_sic/`)
 
@@ -211,6 +227,7 @@ Meta_SIC/
 ├── simulacion_sic/                        # Python simulations
 │   ├── simulacion_sic.py                  # Coherence matrix simulation
 │   ├── sincronizacion_mental.py           # Friction, synchronization & perception
+│   ├── conciencia_dinamica.py             # Dynamic consciousness & SIC v3
 │   └── requirements.txt
 └── seguidor_luz_sic/
     └── seguidor_luz_sic.ino               # Arduino sketch

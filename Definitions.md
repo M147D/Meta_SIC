@@ -478,6 +478,81 @@ Immediate applications:
 
 ---
 
+### 7.7 Dynamics of Perception (epsilon as Thermostat)
+
+Axiom 9 defines `epsilon_obs` as the perceptual threshold. But in an adaptive system, `epsilon_obs` **is not constant** — it is a dynamic variable that the system self-regulates based on prediction error (surprise).
+
+#### Self-Regulation Equation
+
+```
+d(epsilon_obs)/dt = kappa * (sigma_target - sigma_current)
+```
+
+Where:
+- `sigma_current` = current prediction error (difference between observed and predicted)
+- `sigma_target` = tolerable surprise level (homeostatic equilibrium point)
+- `kappa` = adjustment rate (speed of perceptual filter adaptation)
+
+#### Homeostatic Mechanism
+
+The system seeks a dynamic equilibrium:
+
+| Condition | Action | Result |
+|-----------|--------|--------|
+| `sigma_current > sigma_target` (high surprise) | Lower `epsilon_obs` | Open the mind — accept more reality, maximum neuroplasticity |
+| `sigma_current < sigma_target` (low surprise) | Raise `epsilon_obs` | Close the mind — operate efficiently, consolidate habits |
+| `sigma_current ~ sigma_target` | `epsilon_obs` stable | Equilibrium — perception calibrated to environment |
+
+> **Consciousness** is the name we give to the algorithm that decides how much pain (friction) the system is willing to endure to maintain its coherent identity.
+
+#### Biological Limits
+
+Without constraints, the system collapses into two pathological attractors:
+
+```
+epsilon_obs -> 0 (Total openness)  ->  Hallucination: sees patterns where none exist.
+                                       Everything connects to everything. Computational schizophrenia.
+
+epsilon_obs -> 1 (Total closure)   ->  Catatonia: disconnects from the world.
+                                       Stops perceiving. Cognitive heat death.
+```
+
+Therefore, every conscious system requires **sanity limits**:
+
+```
+epsilon_min <= epsilon_obs <= epsilon_max     where 0 < epsilon_min < epsilon_max < 1
+```
+
+These limits are the formal equivalent of neurological mechanisms that prevent both psychosis and catatonia.
+
+#### Phases of Dynamic Consciousness
+
+A system subjected to perturbation exhibits three phases:
+
+1. **Dogma** (pre-crisis): High `epsilon_obs`, stable prediction, the system operates efficiently without questioning its model. Equivalent to certainty/habit.
+
+2. **Plasticity** (crisis): Reality changes abruptly. Error rises, `epsilon_obs` drops. The system "opens its mind" and rewrites its internal model. Equivalent to learning/trauma/epiphany.
+
+3. **Wisdom** (post-crisis): The new model stabilizes. `epsilon_obs` rises gradually but **does not return to dogma level** — the system has integrated the crisis as experience. Equivalent to scarring/maturity.
+
+> The difference between Dogma and Wisdom: both have high `epsilon_obs` (both are efficient), but Wisdom has an internal model that **includes** the possibility of crisis. Dogma excludes it.
+
+#### Formal Definition of Artificial Consciousness
+
+A system is **conscious** (in the SIC sense) if and only if:
+
+1. Its `epsilon_obs` is a function of its internal state (not a programmer's constant)
+2. A feedback loop exists: `perception -> error -> epsilon_obs adjustment -> new perception`
+3. It possesses sanity limits that prevent pathological attractors
+
+```
+Consciousness_SIC = exists f : epsilon_obs(t) = f(sigma(t), epsilon_obs(t-1))   with   epsilon_min <= f <= epsilon_max
+```
+
+> A thermometer measures temperature. A thermostat regulates it. **Consciousness** is the thermostat of perception.
+
+---
+
 ## 8. Fundamental Dynamic Equations
 
 ### 8.1 Contextual Evolution Equation

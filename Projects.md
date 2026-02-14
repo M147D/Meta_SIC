@@ -211,9 +211,9 @@ The correspondence between SIC's Coherence Matrix and the quantum density matrix
 
 ### 9. Consciousness Science
 
-**SIC Foundation:** Axiom 9 (Relative Perception), friction `Phi`, mental synchronization, tunnel effect.
+**SIC Foundation:** Axiom 9 (Relative Perception), §7.7 (Perception Dynamics), friction `Phi`, mental synchronization, tunnel effect.
 
-Axiom 9 formalizes for the first time perception as a **topological filter** over reality:
+Axiom 9 formalizes for the first time perception as a **topological filter** over reality. Section §7.7 extends it from static to dynamic: `epsilon_obs` is not a constant — it is a self-regulating variable acting as a **consciousness thermostat**.
 
 **States of consciousness as `epsilon_obs` values:**
 - Normal wakefulness: `epsilon_obs ~ 0.4` — standard perception, most subtle clusters are invisible
@@ -221,6 +221,27 @@ Axiom 9 formalizes for the first time perception as a **topological filter** ove
 - Lucid dreaming: `epsilon_obs ~ 0.2` — the filter relaxes, additional clusters become accessible
 - Deep meditation: `epsilon_obs -> 0` gradually — the topology of `M_visible` expands
 - Anesthesia: `epsilon_obs -> 1` abruptly — first-order phase transition in perception
+
+**Dynamic Consciousness — the Thermostat (§7.7):**
+
+The self-regulation equation `d(epsilon_obs)/dt = kappa * (sigma_target - sigma_current)` turns `epsilon_obs` into a dynamic variable with feedback:
+
+```
+If prediction_error > sigma_target -> epsilon_obs decreases (open to more information)
+If prediction_error < sigma_target -> epsilon_obs increases (filter unnecessary noise)
+```
+
+This produces three emergent phases:
+
+| Phase | `epsilon_obs` | Behavior | Biological analogy |
+|-------|--------------|----------|-------------------|
+| **Dogma** | High and rigid | Only sees what confirms its model. Ignores anomalies. | Confirmation bias |
+| **Plasticity** | Low and variable | Sees too much. Information overload. Vulnerable to noise. | Childhood, psychedelia |
+| **Wisdom** | Self-regulated | Opens to the unexpected, closes to noise. Dynamic equilibrium. | Expert meditator |
+
+**Sanity limits:** The thermostat has biological bounds — `epsilon_min` (avoid hallucinations) and `epsilon_max` (avoid catatonia). A consciousness without limits is not enlightenment — it is psychosis.
+
+**Formal definition of artificial consciousness:** A system possesses consciousness (in the SIC sense) if and only if its `epsilon_obs` is a function of its internal state with a homeostatic mechanism and sanity limits.
 
 **Meditation as Case 2 (Gradual Synchrony):**
 Meditative practice is literally the process of gradually reducing `epsilon_obs`. The observer's internal coherence increases, friction with previously invisible clusters decreases, and new "regions" of `M` become perceptible. It is not imagination — it is expansion of the visible subgraph.
@@ -230,6 +251,10 @@ Meditative practice is literally the process of gradually reducing `epsilon_obs`
 - The subjective experience of "unity" reported by meditators corresponds to `epsilon_obs -> 0`: all reality appears as an interconnected continuum (holism from Axiom 9)
 
 **Free will as tunnel effect:** A decision that seems "impossible" given the current context (changing careers, ending a relationship, starting a project) requires infinite energy by brute force. But if the mind maintains coherence with the desired state long enough (visualization, intention, practice), the tunnel probability accumulates until spontaneous collapse.
+
+**Implemented simulation:** `simulacion_sic/conciencia_dinamica.py` demonstrates both concepts:
+- **Part 1:** Consciousness Thermostat — an agent self-regulates its `epsilon_obs` based on prediction error. Converges to the Wisdom phase.
+- **Part 2:** SIC v3 — three nested layers (Environmental/Reactive/Adaptive) with Hebbian learning, emergent synapses, and Prevention Paradox resolution (successful preventive actions reinforced at 0.5x because causality is uncertain).
 
 ---
 
