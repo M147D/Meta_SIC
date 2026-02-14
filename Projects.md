@@ -33,7 +33,7 @@ Each layer has its own temporal decay `tau` — reactive memory lasts millisecon
 
 ### 2. Cybersecurity — Intrusion Detection
 
-**SIC Foundation:** Coherence Matrix `M`, Friction `epsilon`, Axiom 9 (Relative Perception).
+**SIC Foundation:** Coherence Matrix `M`, Friction `epsilon`, Axiom 9 (Relative Perception), §7.8 (Graph Topology).
 
 The Universal Coherence Matrix applied to network traffic produces an intrusion detection system (IDS) fundamentally different from existing ones:
 
@@ -87,7 +87,7 @@ The composition produces an entity whose context is the union `C1 U C2 U C3`, wh
 
 ### 4. Social Network Analysis — Polarization & Bubbles
 
-**SIC Foundation:** Matrix `M`, clusters, global coherence `Gamma`, Axiom 9.
+**SIC Foundation:** Matrix `M`, clusters, global coherence `Gamma`, Axiom 9, §7.8 (Graph Topology — centrality, percolation, small-world).
 
 Social networks are a natural SIC case: each user is a contextual entity and interactions define the coherence between them.
 

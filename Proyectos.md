@@ -33,7 +33,7 @@ Cada capa tiene su propio `τ` de decaimiento temporal — la memoria reactiva d
 
 ### 2. Ciberseguridad — Detección de Intrusiones
 
-**Fundamento SIC:** Matriz de Coherencia `𝕄`, Fricción `ε`, Axioma 9 (Percepción Relativa).
+**Fundamento SIC:** Matriz de Coherencia `𝕄`, Fricción `ε`, Axioma 9 (Percepción Relativa), §7.8 (Topología de Grafo).
 
 La Matriz de Coherencia Universal aplicada a tráfico de red produce un sistema de detección de intrusiones (IDS) fundamentalmente diferente a los existentes:
 
@@ -87,7 +87,7 @@ La composición produce una entidad cuyo contexto es la unión `C₁∪C₂∪C�
 
 ### 4. Análisis de Redes Sociales — Polarización y Burbujas
 
-**Fundamento SIC:** Matriz `𝕄`, clusters, coherencia global `Γ`, Axioma 9.
+**Fundamento SIC:** Matriz `𝕄`, clusters, coherencia global `Γ`, Axioma 9, §7.8 (Topología de Grafo — centralidad, percolación, mundo pequeño).
 
 Las redes sociales son un caso natural del SIC: cada usuario es una entidad contextual y las interacciones definen la coherencia entre ellos.
 

@@ -52,6 +52,7 @@ Every phenomenon exists relative to a contextual frame. SIC provides:
 - **Phase Transitions**: Jump operator `Δ` and distributional derivative for discontinuous context changes (§7.5)
 - **Contextual Friction `Φ`**: `Φ(A,B) = 1 - Coh(A,B)` — the ontological incompatibility between states. Dynamic form uses metric tensor. Includes Processing Budget, Resonant Efficiency Corollary, and Contextual Tunnel Effect (§7.6)
 - **Perception Dynamics**: `dε_obs/dt = κ·(σ_target - σ_current)` — consciousness as a self-regulating thermostat with homeostatic feedback, sanity limits, and three emergent phases: Dogma, Plasticity, Wisdom (§7.7)
+- **Graph Topology**: `G_ε = (V, {eᵢⱼ | 𝕄ᵢⱼ > ε})` — coherence matrix as weighted graph with Laplacian spectrum, percolation threshold `ε_c`, betweenness centrality for bridge entities, and dynamic topological evolution (§7.8)
 - **Contextual Entanglement**: Universal Coherence Matrix `𝕄` where `𝕄ᵢⱼ = Coh(Cᵢ, Cⱼ)` — analogous to the quantum density matrix
 - **Local Collapse**: Entanglement friction `ε` decomposes `𝕄` into sparse clusters; collapse is local and percolative, not global O(N³) (§11.4-11.5)
 - **Algebraic Structure**: `(𝔈, ⊕)` is a commutative monoid (§13)
@@ -177,7 +178,7 @@ cd sic_core && cargo run --example demo
 
 ## Python Simulations (`simulacion_sic/`)
 
-Three interactive simulations with visualization:
+Four interactive simulations with visualization:
 
 **1. Universal Coherence Matrix** (`simulacion_sic.py`):
 - Generates N entities, builds `𝕄`, applies friction `ε`, finds clusters, computes collapse
@@ -209,11 +210,30 @@ python conciencia_dinamica.py
 python conciencia_dinamica.py --no-plot  # CLI-only report
 ```
 
+**4. Graph Topology & Percolation** (`grafo_coherencia.py`):
+- Matrix-Graph duality: `𝕄` as weighted graph `G = (V, E, w)`
+- Percolation curve: critical threshold `ε_c` where reality fragments
+- Laplacian spectrum: Fiedler value (algebraic connectivity), spectral gap
+- Betweenness centrality: identifies bridge entities between reality clusters
+- Dynamic graph evolution: fusion/fission of clusters over time
+- Small-world and degree distribution analysis
+
+```bash
+python grafo_coherencia.py --entities 50 --seed 42
+python grafo_coherencia.py --entities 80 --epsilon 0.6 --no-plot
+```
+
 ### Figure 3: Dynamic Consciousness & SIC v3
 
 ![Dynamic Consciousness Simulation](conciencia.png)
 
 *Top row: Consciousness thermostat — `ε_obs` self-regulates through three phases (Dogma → Plasticity → Wisdom) based on prediction error. Bottom row: SIC v3 three-layer system discovers hidden causal rule LOGIN→CPU_LOAD via Hebbian learning (synapse reaches 0.81), transitioning from reactive to preventive behavior.*
+
+### Figure 4: Graph Topology & Percolation
+
+![Graph Topology of the Coherence Matrix](grafo_coherencia.png)
+
+*Top row: Same `𝕄` viewed as graph at three perception thresholds (ε=0.3/0.6/0.9), percolation curve showing critical threshold `ε_c` where reality fragments, and Laplacian spectrum with Fiedler value. Bottom row: Bridge entities (betweenness centrality), degree distribution, and dynamic graph evolution showing fusion/fission events.*
 
 ## Arduino Light Follower (`seguidor_luz_sic/`)
 
@@ -243,6 +263,7 @@ Meta_SIC/
 │   ├── simulacion_sic.py                  # Coherence matrix simulation
 │   ├── sincronizacion_mental.py           # Friction, synchronization & perception
 │   ├── conciencia_dinamica.py             # Dynamic consciousness & SIC v3
+│   ├── grafo_coherencia.py               # Graph topology & percolation
 │   └── requirements.txt
 └── seguidor_luz_sic/
     └── seguidor_luz_sic.ino               # Arduino sketch

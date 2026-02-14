@@ -553,6 +553,160 @@ Conciencia_SIC ≡ ∃f : ε_obs(t) = f(σ(t), ε_obs(t-1))   con   ε_min ≤ f
 
 ---
 
+### 7.8 Topología de Grafo de la Matriz de Coherencia
+
+La Matriz de Coherencia Universal `𝕄` no es solo una tabla de números — es un **grafo ponderado** donde cada entidad es un nodo y cada coherencia no-nula es una arista. Formalizar esta dualidad abre herramientas de teoría de grafos que revelan estructura invisible en la representación matricial.
+
+#### 7.8.1 Dualidad Matriz-Grafo
+
+**Definición.** El **grafo de coherencia** asociado a `𝕄` es:
+
+```
+G = (V, E, w)
+
+donde:
+  V = {E₁, E₂, ..., Eₙ}                    (nodos = entidades contextuales)
+  E = {(i, j) | 𝕄ᵢⱼ > 0, i ≠ j}            (aristas = coherencias no-nulas)
+  w(i, j) = 𝕄ᵢⱼ = Coh(Cᵢ, Cⱼ)              (peso = coherencia)
+```
+
+**Grafo filtrado por percepción.** Dado un umbral de observador `ε_obs` (Axioma 9):
+
+```
+G_ε = (V, E_ε, w)    donde   E_ε = {(i, j) | 𝕄ᵢⱼ > ε_obs}
+```
+
+Cada observador con diferente `ε_obs` habita literalmente un **subgrafo diferente** del mismo grafo universal. El CEO ve un grafo de 3 nodos, el técnico ve uno de 50 — ambos son proyecciones válidas de `G`.
+
+> La matriz es álgebra. El grafo es topología. Juntos son la geometría completa de la realidad.
+
+#### 7.8.2 Métricas Topológicas
+
+El grafo `G_ε` posee métricas que no son visibles en la representación matricial:
+
+**Grado ponderado** — la riqueza contextual de una entidad:
+```
+d_w(i) = Σⱼ 𝕄ᵢⱼ · 𝟙(𝕄ᵢⱼ > ε)
+```
+
+Una entidad con alto grado ponderado es un **nodo hub** — conectada coherentemente con muchas otras realidades.
+
+**Centralidad de intermediación** — entidades puente entre realidades:
+```
+B(v) = Σ_{s≠v≠t} [σ_st(v) / σ_st]
+```
+donde `σ_st` es el número de caminos mínimos entre `s` y `t`, y `σ_st(v)` los que pasan por `v`. Las entidades con alto `B(v)` son **superconductores** entre clusters — sin ellas, las realidades se desconectan.
+
+**Coeficiente de agrupamiento** — densidad local de coherencia:
+```
+C_cluster(i) = [2 · T(i)] / [d(i) · (d(i) - 1)]
+```
+donde `T(i)` es el número de triángulos que incluyen al nodo `i`. Un coeficiente alto indica que los vecinos del nodo también son coherentes entre sí — una "burbuja de realidad" densa.
+
+**Camino de mínima fricción** — la ruta óptima entre dos contextos:
+```
+path(i, j) = argmin_{caminos} Σ_k Φ(e_k)    donde   Φ(e_k) = 1 - w(e_k)
+```
+La fricción `Φ = 1 - Coh` actúa como distancia. El camino de mínima fricción es la transformación contextual de menor costo energético — la ruta que el universo "prefiere" para transitar entre estados.
+
+#### 7.8.3 Laplaciano del Grafo de Coherencia
+
+**Definición.** El Laplaciano del grafo de coherencia:
+```
+L = D - A
+
+donde:
+  A = 𝕄_ε       (matriz de adyacencia = 𝕄 filtrada por ε)
+  D = diag(d_w)  (matriz diagonal de grados ponderados)
+```
+
+**Espectro del Laplaciano.** Los eigenvalores de `L`:
+```
+0 = λ₁ ≤ λ₂ ≤ λ₃ ≤ ... ≤ λₙ
+```
+
+Propiedades fundamentales:
+
+| Eigenvalor | Significado |
+|-----------|------------|
+| Multiplicidad de `λ = 0` | Número de componentes conexas = **número de realidades desconectadas** |
+| `λ₂` (valor de Fiedler) | **Conectividad algebraica** — cuán difícil es fragmentar la realidad |
+| Gap espectral `λ₂ - λ₁` | Robustez del grafo — un gap grande indica una realidad resistente a perturbaciones |
+| Eigenvector de `λ₂` (vector de Fiedler) | Indica la **línea de fractura** natural del grafo — por dónde se partiría la realidad |
+
+> El vector de Fiedler es el "plano de clivaje" de la realidad: marca exactamente la frontera donde, si la fricción aumenta, el universo se parte en dos.
+
+#### 7.8.4 Percolación Contextual
+
+**Definición.** Existe un umbral crítico `ε_c` tal que:
+
+```
+ε < ε_c  →  G_ε es conexo           (realidad unificada)
+ε > ε_c  →  G_ε se fragmenta        (realidades múltiples)
+```
+
+La **curva de percolación** `N_clusters(ε)` vs `ε` describe esta transición:
+
+- Para `ε ≈ 0`: un solo componente gigante (toda la realidad conectada)
+- Para `ε ≈ ε_c`: transición de fase — el componente gigante se rompe
+- Para `ε ≈ 1`: N componentes aislados (cada entidad es su propia realidad)
+
+**Conexión con Axioma 9.** El umbral `ε_obs` de cada observador determina en qué lado de la transición de percolación se encuentra:
+- Observador con `ε_obs < ε_c` → ve una realidad conexa
+- Observador con `ε_obs > ε_c` → ve realidades fragmentadas
+
+Esto es una **transición de fase topológica** — análoga a §7.5 pero en la estructura del grafo, no en los valores de las entidades.
+
+**Tamaño del componente gigante** `S_giant(ε)`:
+```
+S_giant(ε) / N  →  1    cuando ε → 0    (casi todos los nodos conectados)
+S_giant(ε) / N  →  1/N  cuando ε → 1    (nodos aislados)
+```
+
+#### 7.8.5 Grafo Dinámico G(t)
+
+Las coherencias no son estáticas — cambian con el tiempo. El grafo evoluciona:
+
+```
+G(t) = (V, E(t), w(t))    donde   w(i,j,t) = Coh(Cᵢ(t), Cⱼ(t))
+```
+
+**Eventos topológicos dinámicos:**
+
+| Evento | Descripción | Consecuencia |
+|--------|------------|-------------|
+| **Fusión** | `𝕄ᵢⱼ(t)` cruza `ε` de abajo hacia arriba | Dos clusters se conectan — realidades que eran independientes se entrelazan |
+| **Fisión** | `𝕄ᵢⱼ(t)` cae por debajo de `ε` | Un cluster se fragmenta — una realidad se parte en dos |
+| **Nacimiento** | Nueva entidad `Eₖ` aparece con coherencias no-nulas | Nuevo nodo se integra al grafo |
+| **Muerte** | Todas las coherencias de `Eₖ` decaen a cero | Nodo se aísla — la entidad sale de la realidad compartida |
+
+Una **transición de fase topológica** ocurre cuando el número de componentes conexas de `G(t)` cambia — esto es un cambio cualitativo en la estructura de la realidad.
+
+> El Big Bang no es la creación de materia. Es la fusión de un grafo fragmentado en un componente gigante. La muerte térmica es la fisión final en nodos aislados.
+
+#### 7.8.6 Propiedades Emergentes
+
+**Mundo pequeño.** Si el grafo de coherencia cumple:
+```
+L_avg ∝ log(N)       (caminos cortos entre cualquier par)
+C_cluster >> C_random  (alta agrupación local)
+```
+entonces la realidad tiene la propiedad de **mundo pequeño**: cualquier contexto está a pocos pasos de cualquier otro, pero localmente los contextos forman clusters densos.
+
+**Distribución de grado.** Si la distribución de grado sigue una ley de potencia:
+```
+P(k) ∝ k^(-γ)    con γ ∈ [2, 3]
+```
+el grafo es **libre de escala**: existen pocos hubs con muchas conexiones y muchos nodos con pocas. Los hubs son las entidades centrales que sostienen la coherencia del sistema — si se eliminan, la realidad colapsa.
+
+**Modularidad.** La calidad de la partición en clusters:
+```
+Q = (1/2m) Σᵢⱼ [𝕄ᵢⱼ - (dᵢdⱼ/2m)] · δ(cᵢ, cⱼ)
+```
+donde `m` = suma total de pesos, `cᵢ` = cluster del nodo `i`. Alta modularidad indica que la realidad tiene una estructura de clusters bien definida — las fronteras entre realidades son nítidas, no difusas.
+
+---
+
 ## 8. Ecuaciones Dinámicas Fundamentales
 
 ### 8.1 Ecuación de Evolución Contextual

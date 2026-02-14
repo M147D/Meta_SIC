@@ -553,6 +553,160 @@ Consciousness_SIC = exists f : epsilon_obs(t) = f(sigma(t), epsilon_obs(t-1))   
 
 ---
 
+### 7.8 Graph Topology of the Coherence Matrix
+
+The Universal Coherence Matrix `M` is not just a table of numbers — it is a **weighted graph** where each entity is a node and each non-zero coherence is an edge. Formalizing this duality opens graph theory tools that reveal structure invisible in the matrix representation.
+
+#### 7.8.1 Matrix-Graph Duality
+
+**Definition.** The **coherence graph** associated with `M` is:
+
+```
+G = (V, E, w)
+
+where:
+  V = {E_1, E_2, ..., E_n}                  (nodes = contextual entities)
+  E = {(i, j) | M_ij > 0, i != j}           (edges = non-zero coherences)
+  w(i, j) = M_ij = Coh(C_i, C_j)            (weight = coherence)
+```
+
+**Perception-filtered graph.** Given an observer threshold `epsilon_obs` (Axiom 9):
+
+```
+G_eps = (V, E_eps, w)    where   E_eps = {(i, j) | M_ij > epsilon_obs}
+```
+
+Each observer with different `epsilon_obs` literally inhabits a **different subgraph** of the same universal graph. The CEO sees a 3-node graph, the technician sees a 50-node one — both are valid projections of `G`.
+
+> The matrix is algebra. The graph is topology. Together they are the complete geometry of reality.
+
+#### 7.8.2 Topological Metrics
+
+The graph `G_eps` possesses metrics not visible in the matrix representation:
+
+**Weighted degree** — the contextual richness of an entity:
+```
+d_w(i) = sum_j M_ij * 1(M_ij > eps)
+```
+
+An entity with high weighted degree is a **hub node** — coherently connected to many other realities.
+
+**Betweenness centrality** — bridge entities between realities:
+```
+B(v) = sum_{s!=v!=t} [sigma_st(v) / sigma_st]
+```
+where `sigma_st` is the number of shortest paths between `s` and `t`, and `sigma_st(v)` those passing through `v`. Entities with high `B(v)` are **superconductors** between clusters — without them, realities disconnect.
+
+**Clustering coefficient** — local coherence density:
+```
+C_cluster(i) = [2 * T(i)] / [d(i) * (d(i) - 1)]
+```
+where `T(i)` is the number of triangles including node `i`. A high coefficient indicates that a node's neighbors are also coherent with each other — a dense "reality bubble".
+
+**Minimum friction path** — the optimal route between two contexts:
+```
+path(i, j) = argmin_{paths} sum_k Phi(e_k)    where   Phi(e_k) = 1 - w(e_k)
+```
+Friction `Phi = 1 - Coh` acts as distance. The minimum friction path is the contextual transformation of least energy cost — the route the universe "prefers" for transiting between states.
+
+#### 7.8.3 Coherence Graph Laplacian
+
+**Definition.** The Laplacian of the coherence graph:
+```
+L = D - A
+
+where:
+  A = M_eps       (adjacency matrix = M filtered by eps)
+  D = diag(d_w)   (diagonal matrix of weighted degrees)
+```
+
+**Laplacian spectrum.** The eigenvalues of `L`:
+```
+0 = lambda_1 <= lambda_2 <= lambda_3 <= ... <= lambda_n
+```
+
+Fundamental properties:
+
+| Eigenvalue | Meaning |
+|-----------|---------|
+| Multiplicity of `lambda = 0` | Number of connected components = **number of disconnected realities** |
+| `lambda_2` (Fiedler value) | **Algebraic connectivity** — how hard it is to fragment reality |
+| Spectral gap `lambda_2 - lambda_1` | Graph robustness — a large gap indicates reality resistant to perturbation |
+| Eigenvector of `lambda_2` (Fiedler vector) | Indicates the **natural fracture line** of the graph — where reality would split |
+
+> The Fiedler vector is the "cleavage plane" of reality: it marks exactly the boundary where, if friction increases, the universe splits in two.
+
+#### 7.8.4 Contextual Percolation
+
+**Definition.** There exists a critical threshold `eps_c` such that:
+
+```
+eps < eps_c  ->  G_eps is connected        (unified reality)
+eps > eps_c  ->  G_eps fragments           (multiple realities)
+```
+
+The **percolation curve** `N_clusters(eps)` vs `eps` describes this transition:
+
+- For `eps ~ 0`: a single giant component (all reality connected)
+- For `eps ~ eps_c`: phase transition — the giant component breaks apart
+- For `eps ~ 1`: N isolated components (each entity is its own reality)
+
+**Connection with Axiom 9.** Each observer's `epsilon_obs` threshold determines which side of the percolation transition they are on:
+- Observer with `epsilon_obs < eps_c` -> sees connected reality
+- Observer with `epsilon_obs > eps_c` -> sees fragmented realities
+
+This is a **topological phase transition** — analogous to section 7.5 but in the graph structure, not in entity values.
+
+**Giant component size** `S_giant(eps)`:
+```
+S_giant(eps) / N  ->  1    when eps -> 0    (almost all nodes connected)
+S_giant(eps) / N  ->  1/N  when eps -> 1    (isolated nodes)
+```
+
+#### 7.8.5 Dynamic Graph G(t)
+
+Coherences are not static — they change over time. The graph evolves:
+
+```
+G(t) = (V, E(t), w(t))    where   w(i,j,t) = Coh(C_i(t), C_j(t))
+```
+
+**Dynamic topological events:**
+
+| Event | Description | Consequence |
+|-------|------------|-------------|
+| **Fusion** | `M_ij(t)` crosses `eps` from below | Two clusters connect — previously independent realities become entangled |
+| **Fission** | `M_ij(t)` falls below `eps` | A cluster fragments — one reality splits in two |
+| **Birth** | New entity `E_k` appears with non-zero coherences | New node integrates into the graph |
+| **Death** | All coherences of `E_k` decay to zero | Node isolates — entity exits shared reality |
+
+A **topological phase transition** occurs when the number of connected components of `G(t)` changes — this is a qualitative shift in the structure of reality.
+
+> The Big Bang is not the creation of matter. It is the fusion of a fragmented graph into a giant component. Heat death is the final fission into isolated nodes.
+
+#### 7.8.6 Emergent Properties
+
+**Small world.** If the coherence graph satisfies:
+```
+L_avg ~ log(N)         (short paths between any pair)
+C_cluster >> C_random   (high local clustering)
+```
+then reality has the **small-world property**: any context is a few steps from any other, but locally contexts form dense clusters.
+
+**Degree distribution.** If the degree distribution follows a power law:
+```
+P(k) ~ k^(-gamma)    with gamma in [2, 3]
+```
+the graph is **scale-free**: there exist few hubs with many connections and many nodes with few. The hubs are central entities that sustain the system's coherence — if removed, reality collapses.
+
+**Modularity.** The quality of the cluster partition:
+```
+Q = (1/2m) sum_ij [M_ij - (d_i * d_j / 2m)] * delta(c_i, c_j)
+```
+where `m` = total weight sum, `c_i` = cluster of node `i`. High modularity indicates that reality has a well-defined cluster structure — the boundaries between realities are sharp, not diffuse.
+
+---
+
 ## 8. Fundamental Dynamic Equations
 
 ### 8.1 Contextual Evolution Equation
