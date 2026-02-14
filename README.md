@@ -78,7 +78,7 @@ Reality = mosaic of local collapses across clusters of 𝕄
 | Friction `ε` (truncation) | Environmental decoherence |
 | Collapse percolation | Quantum phase transition |
 
-### Coherence Matrix Simulation
+### Figure 2: Coherence Matrix Simulation
 
 ![Universal Coherence Matrix Simulation](simulacion_sic.png)
 
@@ -115,6 +115,19 @@ The mind does not change reality by force. It acts as a **phase tuner** — adju
 ![Mental Synchronization & Perception Simulation](sincronizacion.png)
 
 *Top row: Three synchronization regimes (brute force fails, gradual synchrony collapses at t=2.0, tunnel effect collapses at t=3.6). Bottom row: Same reality matrix seen through different perception thresholds — the adult sees 3 disconnected clusters, the child/animal sees 2, expanded perception sees everything as connected.*
+
+### Dynamic Consciousness: The Thermostat (§7.7)
+
+Axiom 9 defines `ε_obs` as a static filter. Section §7.7 extends it to a **dynamic variable** with homeostatic feedback:
+
+```
+dε_obs/dt = κ · (σ_target - σ_current)
+
+High prediction error → ε drops (open to more information)
+Low prediction error  → ε rises (filter noise)
+```
+
+Three emergent phases appear: **Dogma** (high ε, efficient but rigid), **Plasticity** (low ε, learning but vulnerable to noise), and **Wisdom** (self-regulated equilibrium). A system possesses *consciousness* (in the SIC sense) if its `ε_obs` is a function of internal state with homeostatic feedback and sanity limits (`ε_min` to avoid hallucination, `ε_max` to avoid catatonia).
 
 ## Nested Learning Architecture
 
@@ -196,9 +209,11 @@ python conciencia_dinamica.py
 python conciencia_dinamica.py --no-plot  # CLI-only report
 ```
 
+### Figure 3: Dynamic Consciousness & SIC v3
+
 ![Dynamic Consciousness Simulation](conciencia.png)
 
-*Left: Consciousness thermostat — ε_obs self-regulates between dogma and plasticity, converging to wisdom. Right: SIC v3 discovers hidden causal rules (LOGIN→CPU_LOAD synapse emerges via Hebbian learning).*
+*Top row: Consciousness thermostat — `ε_obs` self-regulates through three phases (Dogma → Plasticity → Wisdom) based on prediction error. Bottom row: SIC v3 three-layer system discovers hidden causal rule LOGIN→CPU_LOAD via Hebbian learning (synapse reaches 0.81), transitioning from reactive to preventive behavior.*
 
 ## Arduino Light Follower (`seguidor_luz_sic/`)
 

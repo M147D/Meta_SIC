@@ -1,0 +1,22 @@
+# Rust build artifacts
+sic_core/target/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Claude Code local config
+.claude/
+
+# Windows artifacts
+nul
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+
+# Exploratory screenshots (named captures, not final images)
+Imagenes/
